@@ -1,0 +1,5 @@
+<ul>
+{% for st in list %}
+    <li>{{st.nom}}--{{st.ville}} -- <a href="{{path ('stade_delete', {id: st.id} )}}">delete</a></li>
+{% endfor %}
+</ul>

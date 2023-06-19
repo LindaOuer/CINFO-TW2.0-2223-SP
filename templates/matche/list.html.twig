@@ -1,0 +1,22 @@
+{{form(form)}}
+  <br>
+  <hr>
+  <br>
+
+  <table border="1">
+    <tr>
+      <th>Numéro Match</th>
+      <th>date</th>
+      <th>Nombre</th>
+      <th>Stade</th>
+    </tr>
+
+    {% for m in list %}
+      <tr>
+        <td>{{ m.id }}</td>
+        <td>{{ m.dateM|date("m/d/Y") }}</td>
+        <td>{{ m.nbSpectateurs }}</td>
+        <td>{{ m.stade.nom }}</td>
+      </tr>
+    {% endfor %}
+  </table>
